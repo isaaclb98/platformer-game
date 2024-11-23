@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D _rb;
     private bool _isGrounded;
+    
+    public Transform respawnPoint;
 
     void Start()
     {
@@ -28,6 +30,11 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.layer == LayerMask.NameToLayer("DeathZone"))
+        {
+            Die();
+        }
+        
         if (collision.contacts[0].normal.y > 0.5f)
         {
             _isGrounded = true;
@@ -37,5 +44,12 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionExit2D(Collision2D collision)
     {
         _isGrounded = false;
+    }
+    
+    private void Die()
+    {
+        // Set to UI later
+        Debug.Log("Player died!");
+        transform.position = respawnPoint != null ? respawnPoint.position : new Vector3(0, 0, 0);
     }
 }
