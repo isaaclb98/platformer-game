@@ -5803,7 +5803,7 @@ Transform:
   m_GameObject: {fileID: 1350575731}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.88, y: 1.01, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5970,7 +5970,7 @@ Transform:
   m_GameObject: {fileID: 1428314284}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.48, y: -4.347091, z: 0}
+  m_LocalPosition: {x: -10, y: -2.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -5990,9 +5990,9 @@ GameObject:
   - component: {fileID: 1561320211}
   - component: {fileID: 1561320210}
   - component: {fileID: 1561320209}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Water
-  m_TagString: DeathZone
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6068,7 +6068,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6569,6 +6569,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 1501852874003393103, guid: 4069cab62ec46b845b2b78b81cca7de5, type: 3}
+      propertyPath: respawnPoint
+      value: 
+      objectReference: {fileID: 1428314285}
     - target: {fileID: 4801292373884155797, guid: 4069cab62ec46b845b2b78b81cca7de5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.37
