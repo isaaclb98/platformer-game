@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 10f;
+    public Animator animator;
 
     private Rigidbody2D _rb;
     private bool _isGrounded;
@@ -22,6 +23,8 @@ public class PlayerController : MonoBehaviour
     {
         float move = Input.GetAxis("Horizontal");
         _rb.velocity = new Vector2(move * moveSpeed, _rb.velocity.y);
+
+        animator.SetFloat("Speed", Mathf.Abs(move));
 
         if (move > 0 && !facingright)
         {
