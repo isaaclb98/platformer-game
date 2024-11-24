@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     private bool _isGrounded;
     
     public Transform respawnPoint;
+    private bool facingright = true;
 
     void Start()
     {
@@ -21,6 +22,15 @@ public class PlayerController : MonoBehaviour
     {
         float move = Input.GetAxis("Horizontal");
         _rb.velocity = new Vector2(move * moveSpeed, _rb.velocity.y);
+
+        if (move > 0 && !facingright)
+        {
+            Flip();
+        }
+        else if (move < 0 && facingright)
+        {
+            Flip();
+        }
 
         if (Input.GetButtonDown("Jump") && _isGrounded)
         {
@@ -39,6 +49,14 @@ public class PlayerController : MonoBehaviour
         {
             _isGrounded = true;
         }
+    }
+    private void Flip()
+    {
+  
+        facingright = !facingright;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1; // Reverse the x-axis
+        transform.localScale = scale;
     }
 
     private void OnCollisionExit2D(Collision2D collision)
