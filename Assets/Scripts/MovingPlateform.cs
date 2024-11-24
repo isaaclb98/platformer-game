@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FloatingPlatform : MonoBehaviour
+public class HorizntalPlatform: MonoBehaviour
 {
     public float moveSpeed = 2f;       // Speed of movement
     public float moveDistance = 5f;   // Distance to move from the starting point
