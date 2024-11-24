@@ -1943,6 +1943,7 @@ GameObject:
   - component: {fileID: 1034144900}
   - component: {fileID: 1034144899}
   - component: {fileID: 1034144898}
+  - component: {fileID: 1034144903}
   m_Layer: 0
   m_Name: FloatingPlatform
   m_TagString: Untagged
@@ -2585,6 +2586,20 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1034144903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1034144896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a83d8f16d101f045a14e12dc99bc68f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  moveDistance: 2
 --- !u!1 &1130176652
 GameObject:
   m_ObjectHideFlags: 0
