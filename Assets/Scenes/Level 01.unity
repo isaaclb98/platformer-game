@@ -11261,6 +11261,22 @@ PrefabInstance:
       propertyPath: respawnPoint
       value: 
       objectReference: {fileID: 1428314285}
+    - target: {fileID: 4310978788903006254, guid: 4069cab62ec46b845b2b78b81cca7de5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.86202
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310978788903006254, guid: 4069cab62ec46b845b2b78b81cca7de5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.965505
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310978788903006254, guid: 4069cab62ec46b845b2b78b81cca7de5, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0043118
+      objectReference: {fileID: 0}
+    - target: {fileID: 4310978788903006254, guid: 4069cab62ec46b845b2b78b81cca7de5, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.017247498
+      objectReference: {fileID: 0}
     - target: {fileID: 4801292373884155797, guid: 4069cab62ec46b845b2b78b81cca7de5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.37
