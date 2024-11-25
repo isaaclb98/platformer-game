@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,8 +8,8 @@ public class GameManager : MonoBehaviour
 
     public int score = 0; // Coin score
     public int keys = 0;  // Key inventory
-    public Text scoreText; // UI Text for score
-    public Text keyText;   // UI Text for keys
+    public TextMeshProUGUI scoreText; // UI Text for score
+    public TextMeshProUGUI keyText;   // UI Text for keys
 
     private void Awake()
     {
