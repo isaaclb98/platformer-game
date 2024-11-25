@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Coin_Script : MonoBehaviour
+public class Coin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int coinValue = 1; // Value of the coin (can be customized)
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player")) // Check if the player touches the coin
+        {
+            // Add to the player's score
+            GameManager.instance.AddScore(coinValue);
+
+            // Destroy the coin
+            Destroy(gameObject);
+        }
     }
 }

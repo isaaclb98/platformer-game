@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Key_Script : MonoBehaviour
+public class Key : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int keyValue = 1; // Number of keys to add to the player's inventory
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.CompareTag("Player")) // Check if the player collides with the key
+        {
+            // Add keys to the player's inventory
+            GameManager.instance.AddKeys(keyValue);
+
+            // Destroy the key
+            Destroy(gameObject);
+        }
     }
 }

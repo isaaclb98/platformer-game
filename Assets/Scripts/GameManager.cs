@@ -1,18 +1,52 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager instance;
+
+    public int score = 0; // Coin score
+    public int keys = 0;  // Key inventory
+    public Text scoreText; // UI Text for score
+    public Text keyText;   // UI Text for keys
+
+    private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void AddScore(int value)
     {
-        
+        score += value;
+        UpdateScoreUI();
+    }
+
+    public void AddKeys(int value)
+    {
+        keys += value;
+        UpdateKeyUI();
+    }
+
+    private void UpdateScoreUI()
+    {
+        if (scoreText != null)
+        {
+            scoreText.text = "Score: " + score.ToString();
+        }
+    }
+
+    private void UpdateKeyUI()
+    {
+        if (keyText != null)
+        {
+            keyText.text = "Keys: " + keys.ToString();
+        }
     }
 }
