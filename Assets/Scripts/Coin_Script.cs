@@ -16,4 +16,7 @@ public class Coin : MonoBehaviour
         }
     }
 }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
