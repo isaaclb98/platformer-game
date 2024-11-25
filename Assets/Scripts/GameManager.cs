@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int keys = 0;  // Key inventory
     public TextMeshProUGUI scoreText; // UI Text for score
     public TextMeshProUGUI keyText;   // UI Text for keys
+
+    public Button RestartButton;
 
     private void Awake()
     {
@@ -49,5 +52,20 @@ public class GameManager : MonoBehaviour
         {
             keyText.text = "Keys: " + keys.ToString();
         }
+    }
+
+    public void RestartGame()
+    {
+    Time.timeScale = 1; 
+    int nextSceneIndex = SceneManager.GetActiveScene().buildIndex;
+    if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
+    {
+        SceneManager.LoadScene(nextSceneIndex);  
+    }
+    else
+    {
+        Debug.Log("No more levels available.");
+    }
+        
     }
 }
