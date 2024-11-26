@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void UpdateKeyUI()
+    public void UpdateKeyUI()
     {
         if (keyText != null)
         {
